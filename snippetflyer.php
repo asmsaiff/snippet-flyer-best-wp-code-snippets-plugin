@@ -27,7 +27,7 @@
         // Exit if accessed directly.
     }
 
-    function _snippetFlyer($attr, $content) {
+    function snippetFlyer($attr, $content) {
         $default_language = array(
             'lang' => ''
         );
