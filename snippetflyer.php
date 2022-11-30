@@ -1,18 +1,18 @@
 <?php
     /**
-     *  Editor
+     *  Snippet Flyer
      *
-     *  @package     Editor
+     *  @package     Snippet Flyer
      *  @author      Saifullah Siddique
      *  @copyright   2022 Saifullah Siddique
      *  @license     GPL-2.0+
      *
      *  @wordpress-plugin
-     *  Plugin Name: Editor
+     *  Plugin Name: Snippet Flyer
      *  Description: Add beautiful code snippets to your blog posts or content area.
      *  Author: Saifullah Siddique
      *  Author URI: http://www.saifullah.co
-     *  Text Domain: editor
+     *  Text Domain: snippetflyer
      *  License:     GPL-2.0+
      *  License URI: http://www.gnu.org/license/gpl-2.0.txt
      *  Version: 1.0.0
@@ -27,7 +27,7 @@
         // Exit if accessed directly.
     }
 
-    function _editor($attr, $content) {
+    function _snippetFlyer($attr, $content) {
         $default_language = array(
             'lang' => ''
         );
@@ -56,22 +56,22 @@
             strip_tags($content)
         );
     }
-    add_shortcode( 'editor', '_editor' );
+    add_shortcode( 'sf-editor', 'snippetFlyer' );
 
     /**
      * Enqueue stylesheets for WP Accessibility.
      */
-    function editor_stylesheet() {
+    function snippetflyer_stylesheet() {
         // Add CSS
-        wp_register_style( 'editor-css', plugins_url('/css/editor.css', __FILE__));
-        wp_enqueue_style( 'editor-css' );
-        wp_register_style( 'editor-hljs-css', plugins_url( '/css/solarized_dark.css', __FILE__ ));
-        wp_enqueue_style( 'editor-hljs-css' );
+        wp_register_style( 'snippetflyer-css', plugins_url('/css/editor.css', __FILE__));
+        wp_enqueue_style( 'snippetflyer-css' );
+        wp_register_style( 'snippetflyer-hljs-css', plugins_url( '/css/solarized_dark.css', __FILE__ ));
+        wp_enqueue_style( 'snippetflyer-hljs-css' );
 
         // Add JS
-        wp_register_script( 'editor-hljs', plugins_url( '/js/highlight.js', __FILE__ ), null, time(), true );
-        wp_enqueue_script( 'editor-hljs' );
-        wp_register_script( 'editor-app', plugins_url( '/js/app.js', __FILE__ ), null, time(), true );
-        wp_enqueue_script( 'editor-app' );
+        wp_register_script( 'snippetflyer-hljs', plugins_url( '/js/highlight.js', __FILE__ ), null, time(), true );
+        wp_enqueue_script( 'snippetflyer-hljs' );
+        wp_register_script( 'snippetflyer-app', plugins_url( '/js/app.js', __FILE__ ), null, time(), true );
+        wp_enqueue_script( 'snippetflyer-app' );
     }
-    add_action( 'wp_enqueue_scripts', 'editor_stylesheet' );
+    add_action( 'wp_enqueue_scripts', 'snippetflyer_stylesheet' );
