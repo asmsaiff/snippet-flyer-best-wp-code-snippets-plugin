@@ -3,19 +3,19 @@
      *  Snippet Flyer
      *
      *  @package     Snippet Flyer
-     *  @author      Saifullah Siddique
-     *  @copyright   2022 Saifullah Siddique
+     *  @author      S. Saif
+     *  @copyright   2022 S. Saif
      *  @license     GPL-2.0+
      *
      *  @wordpress-plugin
      *  Plugin Name: Snippet Flyer
      *  Description: Add beautiful code snippets to your blog posts or content area.
-     *  Author: Saifullah Siddique
-     *  Author URI: http://www.saifullah.co
+     *  Author: S. Saif
+     *  Author URI: http://www.saif.im
      *  Text Domain: snippetflyer
      *  License:     GPL-2.0+
      *  License URI: http://www.gnu.org/license/gpl-2.0.txt
-     *  Version: 1.0.0
+     *  Version: 1.0.1
      */
 
     /*
@@ -44,7 +44,7 @@
                             <circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"></circle>
                         </g>
                     </svg>
-                    
+
                     <pre>
                         <code class="language-%s">
                             %s
